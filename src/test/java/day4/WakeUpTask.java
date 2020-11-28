@@ -15,5 +15,13 @@ public class WakeUpTask {
                 "ORDER BY 1  ";
         DB_Utility.runQuery(query);
         DB_Utility.displayAllData();
+
+        System.out.println("DB_Utility.getRowCount() = "+DB_Utility.getRowCount());
+        System.out.println("DB.Utility.getColumnCount() = "+DB_Utility.getColumnCount());
+        System.out.println("DB_Utility.getColumnDataAsList() = " +DB_Utility.getColumnDataAsList("FIRST_NAME"));
+        DB_Utility.destroy();
+
+        System.out.println("DB_Utility.getRowMap(2)= "+DB_Utility.getRowMap(2));
+        System.out.println("DB_Utility.getAllDataAsListOfMap() =\n\t" +DB_Utility.getAllDataAsListOfMap());
     }
 }
